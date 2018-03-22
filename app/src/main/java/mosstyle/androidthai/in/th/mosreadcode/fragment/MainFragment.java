@@ -36,8 +36,25 @@ public class MainFragment extends Fragment{
 //        Login Controller
         loginController();
 
+        //test();
 
     }   // main method
+
+    private void test() {
+
+        final String[] loginStrings = new String[]{"13","tanakorn","mos","12345"};
+
+        Button button = getView().findViewById(R.id.btnLogin);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Toast.makeText(getActivity(),"Welcome " + loginStrings[1],
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
 
     private void loginController() {
         Button button = getView().findViewById(R.id.btnLogin);
